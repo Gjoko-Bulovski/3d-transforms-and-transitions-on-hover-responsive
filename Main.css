@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+section::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/** homepage-99 **/
+.homepage-99 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.homepage-99 h1 {
+    background: #40a629;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+#page-99 {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    position: relative;
+}
+.col-99 {
+    float: left;
+    width: 33%;
+    margin-top: 30px;
+}
+#row-99 .albumcontainer:hover .picture {
+    transform: rotateY(180deg);
+}
+
+/** homepage-100 **/
+.homepage-100 {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.homepage-100 h1 {
+    background: #008738;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: #fff;
+}
+#page-100 {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    position: relative;
+}
+.col-100 {
+    float: left;
+    width: 33%;
+    margin-top: 30px;
+}
+#row-100 .back{
+    transform: rotateZ(180deg) rotateY(180deg);
+}
+#row-100 .albumcontainer:hover .picture {
+    transform: rotateX(180deg);
+}
+
+/** all **/
+.albumcontainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    perspective: 1000px;
+}
+.picture {
+    width: 100%;
+    height: 100%;
+    box-shadow: 3px 3px 10px #1c1c1c;
+    transform-style: preserve-3d;
+    transition: all linear 1s;
+}
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #40a629;
+    text-align: center;
+    background: #fff;
+    transform: rotateY(180deg);
+    border: 3px solid #008738;
+}
+.back h2, span {
+    margin-top: 40%;
+}
+.back h2 {
+    font-size: 25px;
+    color: #008738;
+}
+.back span {
+    font-size: 20px;
+    color: #40a629;
+}
+
+/** media **/
+@media(max-width: 1200px) {
+    #page-99 {
+        width: auto;
+        height: auto;
+    }
+    #page-100 {
+        width: auto;
+        height: auto;
+    }
+}
+@media(max-width: 950px) {
+    .col-99 {
+        width: 50%;
+        float: left;
+    }
+    .col-100 {
+        float: left;
+        width: 50%;
+   }
+}
+@media(max-width: 768px) {
+    .col-99 {
+        width: 100%;
+        float: none;
+    }
+    .col-100 {
+        float: none;
+        width: 100%;
+   }
+}
